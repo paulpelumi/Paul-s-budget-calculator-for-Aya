@@ -1,0 +1,50 @@
+body {
+    margin: 0 40 0 40;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.first-container {
+    padding: 3% 10%;
+
+}
+
+#calculate{
+    padding: 3% 15%;
+}
+
+.results {
+    padding: 3% 10%;
+    color: darkred;
+    text-align: center;
+}
+hr {
+    border-style: block none none;
+        height: 0px;
+        width: 80%;
+        border-color: #ff4c68;
+        border-width: 5px;
+}
+}
+
+.drop {
+    color: rgb(40, 119, 9);
+}
+.title {
+    color: rgb(255, 255, 255);
+    background-color: rgba(33, 33, 235, 0.808);
+    margin-top: 20px auto;
+    padding: 20% auto;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.information {
+    padding-left: 10% ;
+    text-align: center;
+    line-height: 1rem;
+}

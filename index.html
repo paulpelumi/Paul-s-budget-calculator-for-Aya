@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul's Budget Calculator</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+<body>
+    <header class="title">BUDGET CALCULATOR FOR AYA</header>
+    <section>
+
+        <div class="information"> 
+            <br>
+         
+        <form  action="https://google.com" method="post" enctype="text/plain"></form>
+        <label>Your name: </label>
+        <input type="text" name="YourName"> <br>
+
+        <br>
+        <label>Age: </label>
+        <input type="text" name="YourName"> <br>
+        <br>
+        
+        <label>Gender:</label>
+        <select class="gender" name="sex">
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+        <br>
+        <br>
+        <label>Marital Status:</label>
+        <select class="marital" name="marital">
+          <option>Single</option>
+          <option>Engaged</option>
+          <option>Married</option>
+          <option>God abeg!</option>
+        </select>
+        <br>
+        <br>
+
+        <label>Number of Dependents: </label>
+        <input type="text" name="YourName"> <br>
+        </div>
+         
+    </section>
+
+    <hr>
+
+<section>
+    <h1 style="color:Blue ;">BUDGET SECTION</h1>
+    <div class="container" id="currency-wrapper">
+        <label for="currency">Select Currency</label>
+        <select name="currency" id="currency" >
+            <option value="N" selected>Naira</option>
+        </select>
+    </div>
+<br>
+
+    <div class="first-container"> 
+        <form>
+            <details open>
+                <summary class="drop"><h2>Income</h2></summary>
+                    <div class="user-input">
+                        <label class="" for="salary">Monthly Salary</label>
+                        <input type="number" id="salary" class="income amount" name="salary" placeholder="Naira" min="0"> 
+                    </div>
+            </details>
+            <br>
+
+            <details class="drop-down">
+                    <summary class="drop"><h2>Bills & Debt</h2></summary>
+                    <div class="user-input">
+                        <label for="debts">Total amount to be paid</label>
+                        <input type="number" id="debts" class="expenses bills amount" name="debts" placeholder="Naira" min="0">
+                    
+                    </div>
+            </details>
+            <details class="drop-down">
+                <summary class="drop"><h2>Savings</h2></summary>
+                <div class="user-input">
+                    <label for="savings">Amount saved per month</label>
+                    <input type="number" id="savings" class="expenses keep amount" name="savings" placeholder="Naira" min="0">
+              
+                </div>
+            </details>
+            <details class="drop-down">
+                <summary class="drop"><h2>Rentage</h2></summary>
+                <div class="user-input">
+                    <label for="house-rent">House Rent</label>
+                    <input type="number" id="house-rent" class="expenses rentage amount" name="house-rent" placeholder="Naira" min="0">
+                
+                </div>
+            </details>
+            <details class="drop-down">
+                <summary class="drop"><h2>Insurance</h2></summary>
+                <div class="user-input">
+                    <label for="life-insurance">Home Insurance</label>
+                    <input type="number" id="life-insurance" class="expenses insurance amount" name="life-insurance" placeholder="Naira" min="0">
+              
+                </div>
+            </details>
+            <details class="drop-down">
+                <summary class="drop"><h2>Miscelleanous spendings(e.g Petrol)</h2></summary>
+                <div class="user-input">
+                    <label for="miscelleanous">Miscelleanous</label>
+                    <input type="number" id="miscelleanous" class="expenses unexpected amount" name="miscelleanous" placeholder="Naira"  min="0">
+       
+                </div>>
+            </details>
+            <details class="drop-down">
+                <summary class="drop"><h2>Transport</h2></summary>
+                <div class="user-input">
+                    <label for="transit">Amount spent on Transportation</label>
+                    <input type="number" id="transit" class="expenses transport amount" name="transit" placeholder="Naira" min="0">
+          
+                </div>
+            </details>
+            <details class="drop-down">
+                <summary class="drop"><h2>Food</h2></summary>
+                <div class="user-input">
+                    <label for="food">Amount spent on foodstuffs</label>
+                    <input type="number" id="food" class="expenses groceries amount" name="food" placeholder="Naira" min="0">
+          
+                </div>
+            </details>
+            <details class="drop-down">
+                <summary class="drop"><h2>Healthcare</h2></summary>
+                <div class="user-input">
+                    <label for="health">Amount spent on health</label>
+                    <input type="number" id="health" class="expenses hospital amount" name="health" placeholder="Naira" min="0">
+      
+                </div>
+            </details>            
+            <details class="drop-down">
+                <summary class="drop"><h2>Enjoyment</h2></summary>
+                <div class="user-input">
+                    <label for="balling">Amount Spent on Enjoyment</label>
+                    <input type="number" id="balling" class="expenses enjoyment amount" name="balling" placeholder="Naira" min="0">
+   
+                </div>    
+            </details>
+                       
+            <div id="calculate">
+                <button id="calc-btn" type="button" class="btn btn-dark btn-lg download-btn">Calculate</button>
+                <button id="reset-btn" type="reset" class="btn btn-outline-danger btn-lg download-btn">Reset Form</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<hr>
+
+<h1 class="results">RESULTS</h1>
+
+<div>
+    <div id="results">
+    </div>
+        <div id="chart">
+    </div>
+</div>
+<br>
+    <script src="script.js"></script>
+</body>
+</html>
